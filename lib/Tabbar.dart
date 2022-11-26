@@ -53,18 +53,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         Tab(text: 'Gold'),
                         Tab(text: 'Pink Gold'),
                         Tab(text: 'White Gold'),
-                        Tab(text: 'Tab 4'),
+                        Tab(text: 'Platinum'),
                       ],
                     ),
                   ),
                   Container(
-                      height: 1400, //height of TabBarView
+                      height: 2000, //height of TabBarView
                       decoration: BoxDecoration(
                           border: Border(top: BorderSide(color: Colors.grey, width: 0.5))
                       ),
                       child: TabBarView(children: <Widget>[
-                        HomePage(),
                         WatchGold(),
+                        HomePage(),
                         HomePage(),
                         HomePage(),
                       ])

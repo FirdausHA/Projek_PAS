@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:projek_pas/Model/Watch.dart';
 
-import 'package:projek_pas/Model/Watch.dart';
 
-class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key, required this.watch}) : super(key: key);
+class Deatail extends StatefulWidget {
+  const Deatail({Key? key, required this.watch}) : super(key: key);
   final Watch watch;
 
   @override
-  State<DetailPage> createState() => _DetailPageState();
+  State<Deatail> createState() => _DetailState();
 }
 
-class _DetailPageState extends State<DetailPage> {
+class _DetailState extends State<Deatail> {
   int quantity = 1;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class _DetailPageState extends State<DetailPage> {
           const SizedBox(height: 20),
           header(),
           const SizedBox(height: 20),
-          image(),
+          images(),
           details(),
         ],
       ),
@@ -50,11 +49,11 @@ class _DetailPageState extends State<DetailPage> {
                         fontSize: 34,
                       ),
                     ),
-                    Text('\$${widget.watch.color}',
+                    Text('\$${widget.watch.subtitle}',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xfff0deba),
+                          color: Colors.green,
                         )),
                   ],
                 ),
@@ -96,11 +95,10 @@ class _DetailPageState extends State<DetailPage> {
           const SizedBox(height: 30),
           Row(
             children: [
-              const Spacer(),
-              const Icon(Icons.access_time_filled, color: Colors.amber),
+              const Icon(Icons.star, color: Colors.amber),
               const SizedBox(width: 4),
               Text(
-                widget.watch.brand,
+                widget.watch.color.toString(),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -110,7 +108,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
           const SizedBox(height: 30),
           Text(
-            'About Food',
+            'Description Watch',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -152,7 +150,7 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 
-  SizedBox image() {
+  SizedBox images() {
     return SizedBox(
       width: double.infinity,
       height: 300,
