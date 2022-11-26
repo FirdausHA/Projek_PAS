@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Bottom_Navbar.dart';
 import 'package:projek_pas/Tabbar.dart';
 import 'package:projek_pas/home_page.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         backgroundColor: Color(0xff293f6e),
        ),
-      home: MyHomePage(),
+      home: Bottom(),
     );
   }
 }

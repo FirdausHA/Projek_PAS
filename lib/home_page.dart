@@ -137,7 +137,6 @@ class _HomePageState extends State<HomePage> {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      drawer: Drawer(),
       key: _key,
       appBar: buildAppbar(),
       body: Padding(

@@ -38,7 +38,7 @@ final dummyWatch = [
   Watch(
     id: '1',
     image: 'images/Gold_1.png',
-    name: 'WatchGold',
+    name: 'HUBLOT',
     subtitle: 'Decker watch',
     color: 'Gold',
     description:
@@ -47,7 +47,7 @@ final dummyWatch = [
   Watch(
     id: '2',
     image: 'images/Gold_2.png',
-    name: 'WatchGold',
+    name: 'HUBLOT',
     subtitle: 'Decker watch',
     color: 'Gold',
     description:
@@ -56,7 +56,7 @@ final dummyWatch = [
   Watch(
     id: '3',
     image: 'images/Gold_3.png',
-    name: 'WatchGold',
+    name: 'HUBLOT',
     subtitle: 'Decker watch',
     color: 'Gold',
     description:
@@ -65,7 +65,7 @@ final dummyWatch = [
   Watch(
     id: '4',
     image: 'images/Gold_4.png',
-    name: 'WatchGold',
+    name: 'HUBLOT',
     subtitle: 'Decker watch',
     color: 'Gold',
     description:
@@ -78,36 +78,36 @@ final dummyWatch_1 = [
   Watch(
     id: '1',
     image: 'images/pinkgold_1.png',
-    name: 'Watch Pink Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'OMEGA',
+    subtitle: 'Cosmograph watch',
+    color: 'Yellow Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '2',
     image: 'images/pinkgold_2.png',
-    name: 'Watch Pink Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'OMEGA',
+    subtitle: 'Cosmograph watch',
+    color: 'Yellow Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '3',
     image: 'images/pinkgold_3.png',
-    name: 'Watch Pink Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'OMEGA',
+    subtitle: 'Cosmograph watch',
+    color: 'Yellow Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '4',
     image: 'images/pinkgold_4.png',
-    name: 'Watch Pink Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'OMEGA',
+    subtitle: 'Cosmograph watch',
+    color: 'Yellow Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
@@ -118,36 +118,76 @@ final dummyWatch_2 = [
   Watch(
     id: '1',
     image: 'images/whitegold_1.png',
-    name: 'Watch White Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'TUDOR',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '2',
     image: 'images/whitegold_2.png',
-    name: 'Watch White Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'TUDOR',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '3',
     image: 'images/whitegold_3.png',
-    name: 'Watch White Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'TUDOR',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
   Watch(
     id: '4',
     image: 'images/whitegold_4.png',
-    name: 'Watch White Gold',
-    subtitle: 'Decker watch',
-    color: 'Pink Gold',
+    name: 'TUDOR',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
+    description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  ),
+];
+
+final dummyWatch_3 = [
+  // pinkgold
+  Watch(
+    id: '1',
+    image: 'images/Platinum_1.png',
+    name: 'ZENITH',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
+    description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  ),
+  Watch(
+    id: '2',
+    image: 'images/Platinum_2.png',
+    name: 'ZENITH',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
+    description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  ),
+  Watch(
+    id: '3',
+    image: 'images/Platinum_3.png',
+    name: 'ZENITH',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
+    description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  ),
+  Watch(
+    id: '4',
+    image: 'images/Platinum_4.png',
+    name: 'ZENITH',
+    subtitle: 'Big Bang watch',
+    color: 'White Gold',
     description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),

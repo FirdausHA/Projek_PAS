@@ -3,14 +3,14 @@ import 'package:projek_pas/Model/Watch.dart';
 
 import 'Detail.dart';
 
-class WatchGold extends StatefulWidget {
-  const WatchGold({Key? key}) : super(key: key);
+class PlatinumWatch extends StatefulWidget {
+  const PlatinumWatch({Key? key}) : super(key: key);
 
   @override
-  State<WatchGold> createState() => _WatchGoldState();
+  State<PlatinumWatch> createState() => _PlatinumWatch();
 }
 
-class _WatchGoldState extends State<WatchGold> {
+class _PlatinumWatch extends State<PlatinumWatch> {
   int indexCategory = 0;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _WatchGoldState extends State<WatchGold> {
 
   Widget gridWatch() {
     return GridView.builder(
-      itemCount: dummyWatch.length,
+      itemCount: dummyWatch_3.length,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10),
@@ -37,7 +37,7 @@ class _WatchGoldState extends State<WatchGold> {
         mainAxisExtent: 265,
       ),
       itemBuilder: (context, index) {
-        Watch watch = dummyWatch[index];
+        Watch watch = dummyWatch_3[index];
         return GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
