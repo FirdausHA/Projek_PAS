@@ -1,277 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Screen/Platinum.dart';
+import 'package:projek_pas/Screen/White_Gold.dart';
+import 'package:projek_pas/Screen/Yellow_Gold.dart';
+import 'package:projek_pas/home_page.dart';
 
 import 'Screen/Watch_Gold.dart';
-import 'details_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final GlobalKey<ScaffoldState> _key = GlobalKey();
-
-  var screenHeight;
-  var screenWidth;
-  bool favorite = false;
-
-  AppBar buildAppbar() {
-    return AppBar(
-      // leading: IconButton(
-      //   onPressed: () {
-      //     _key.currentState!.openDrawer();
-      //   },
-      //   icon: Icon(
-      //     Icons.sort,
-      //     color: Color(0xfff0deba),
-      //   ),
-      // ),
-      // actions: [
-      //   IconButton(
-      //     onPressed: () {},
-      //     icon: Icon(Icons.search),
-      //   ),
-      //   IconButton(
-      //     onPressed: () {},
-      //     icon: Icon(
-      //       Icons.shopping_cart_outlined,
-      //     ),
-      //   )
-      // ],
-    );
-  }
-
-  Widget buildProductTitle({required title}) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: TextStyle(
-                letterSpacing: 7,
-                fontFamily: "customFont",
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              "PRODUCTS",
-              style: TextStyle(
-                letterSpacing: 7,
-                fontSize: 30,
-                fontFamily: "customFont",
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget buildSingleWatchProduct(
-      {required image, required title, required subTitle}) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          GestureDetector(
-            onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (con)=>DetailsPage()));
-            },
-            child: Container(
-              alignment: Alignment.topRight,
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                color: Color(0xfffdd691),
-                image: DecorationImage(
-                  image: AssetImage("images/$image.png"),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 2,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                  fontFamily: "customFont",
-                  letterSpacing: 7,
-                  fontSize: screenWidth! / 55,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Text(
-                subTitle,
-                style: TextStyle(
-                  fontFamily: "customFont",
-                  letterSpacing: 7,
-                  fontSize: screenWidth! / 30,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    screenHeight = MediaQuery.of(context).size.height;
-    screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      drawer: Drawer(),
-      key: _key,
-      appBar: buildAppbar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 35),
-        child: Column(
-          children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  buildProductTitle(
-                    title: "FEATURED",
-                  ),
-                  Container(
-                    height: screenHeight! / 4 - 40,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xffffd792),
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    "WATCH STORE",
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Color(0xff2a3d50),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 24,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 1,
-                                ),
-                                Flexible(
-                                  child: Text(
-                                    "Fashion Men Quartz\nwatch Luxury Leathers\nStrop WAterprof",
-                                    style: TextStyle(
-                                      color: Color(0xffad8347),
-                                      fontWeight: FontWeight.bold,
-
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Expanded(
-                                  child: MaterialButton(
-                                    onPressed: () {},
-                                    elevation: 5,
-                                    color: Color(0xfffbf9e4),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          "Buy Now",
-                                          style: TextStyle(
-                                            color: Color(0xff846b4d),
-                                          ),
-                                        ),
-                                        Flexible(
-                                          child: Icon(
-                                            Icons.arrow_forward_sharp,
-                                            color: Color(0xff846b4d),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Image.asset("images/image1.png"),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: screenHeight! / 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // scrollDirection: Axis.horizontal,
-                children: [
-                  buildProductTitle(
-                    title: "TRENDING",
-                  ),
-                  Row(
-                    children: [
-                      buildSingleWatchProduct(
-                        image: "image3",
-                        title: "FOSSIL",
-                        subTitle: "GRANT WATCH",
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      buildSingleWatchProduct(
-                        image: "image2",
-                        title: "Tommy HILFIGER",
-                        subTitle: "DECKER WATCH",
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
   // This widget is the root of your application.
   @override
-  Widget buildTabbar(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Tab inside body widget',
+      title: 'Tab inside body widget',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -292,14 +36,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Tabs Example'),
-      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
-            SizedBox(height: 20.0),
-            Text('Tabs Inside Body', textAlign: TextAlign.center, style: TextStyle(fontSize: 22)),
+            SizedBox(height: 10),
+            Text('Product', textAlign: TextAlign.center, style: TextStyle(fontSize: 22)),
             DefaultTabController(
                 length: 4, // length of tabs
                 initialIndex: 0,
@@ -307,25 +48,25 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     child: TabBar(
                       labelColor: Color(0xfff0deba),
-                      unselectedLabelColor: Colors.white,
+                      unselectedLabelColor: Colors.grey,
                       tabs: [
                         Tab(text: 'Gold'),
-                        Tab(text: 'Pink Gold'),
+                        Tab(text: 'Yellow Gold'),
                         Tab(text: 'White Gold'),
                         Tab(text: 'Platinum'),
                       ],
                     ),
                   ),
                   Container(
-                      height: 2000, //height of TabBarView
+                      height: 700, //height of TabBarView
                       decoration: BoxDecoration(
-                          border: Border(top: BorderSide(color: Colors.grey, width: 0.5))
+                          border: Border(top: BorderSide(color: Colors.grey, width: 0))
                       ),
                       child: TabBarView(children: <Widget>[
                         WatchGold(),
-                        WatchGold(),
-                        WatchGold(),
-                        WatchGold(),
+                        WatchYellow(),
+                        WhiteGold(),
+                        PlatinumWatch(),
                       ])
                   )
                 ])
