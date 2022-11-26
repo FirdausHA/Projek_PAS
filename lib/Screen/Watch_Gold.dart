@@ -177,12 +177,12 @@ class _WatchGoldState extends State<WatchGold> {
       itemCount: dummyWatch.length,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(10),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 4,
+        mainAxisSpacing: 10,
         crossAxisSpacing: 4,
-        mainAxisExtent: 261,
+        mainAxisExtent: 265,
       ),
       itemBuilder: (context, index) {
         Watch watch = dummyWatch[index];
@@ -216,15 +216,17 @@ class _WatchGoldState extends State<WatchGold> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        watch.name,
-                        style: Theme.of(context).textTheme.headline6,
-                        textAlign: TextAlign.center,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+                    const SizedBox(height: 5),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          watch.name,
+                          style: Theme.of(context).textTheme.headline6,
+                          textAlign: TextAlign.center,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                     ),
                   ],
