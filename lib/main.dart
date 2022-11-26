@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Tabbar.dart';
 import 'package:projek_pas/home_page.dart';
 
 void main() {
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
         backgroundColor: Color(0xff293f6e),
-      ),
-      home: HomePage(),
+       ),
+      home: MyHomePage(),
     );
   }
 }

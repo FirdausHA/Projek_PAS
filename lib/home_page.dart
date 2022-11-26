@@ -46,43 +46,27 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: TextStyle(
-                letterSpacing: 7,
-                fontFamily: "customFont",
-                color: Colors.white,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  letterSpacing: 7,
+                  fontFamily: "customFont",
+                  color: Colors.white,
+                ),
               ),
-            ),
-            Text(
-              "PRODUCTS",
-              style: TextStyle(
-                letterSpacing: 7,
-                fontSize: 30,
-                fontFamily: "customFont",
-                color: Colors.white,
+              Text(
+                "PRODUCTS",
+                style: TextStyle(
+                  letterSpacing: 7,
+                  fontSize: 30,
+                  fontFamily: "customFont",
+                  color: Colors.white,
+                ),
               ),
-            ),
-          ],
-        ),
-        // Padding(
-        //   padding: const EdgeInsets.only(top: 20),
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       Icon(
-        //         Icons.arrow_back_ios_outlined,
-        //         color: Color(0xfff0deba),
-        //       ),
-        //       Icon(
-        //         Icons.arrow_forward_ios_outlined,
-        //         color: Color(0xfff0deba),
-        //       ),
-        //     ],
-        //   ),
-        // )
+            ],
+          ),
       ],
     );
   }
@@ -105,26 +89,6 @@ class _HomePageState extends State<HomePage> {
                 color: Color(0xfffdd691),
                 image: DecorationImage(
                   image: AssetImage("images/$image.png"),
-                ),
-              ),
-              child: Container(
-                margin: EdgeInsets.all(8.0),
-                height: screenHeight! / 20,
-                width: screenWidth! / 10,
-                decoration: BoxDecoration(
-                  color: Color(0xffe8bc73),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      favorite = !favorite;
-                    });
-                  },
-                  icon: Icon(
-                    favorite ? Icons.favorite : Icons.favorite_border,
-                    color: Colors.white,
-                  ),
                 ),
               ),
             ),
@@ -188,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                     title: "FEATURED",
                   ),
                   Container(
-                    height: screenHeight! / 4 - 37,
+                    height: screenHeight! / 4 - 40,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xffffd792),
@@ -215,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 5,
+                                  height: 1,
                                 ),
                                 Flexible(
                                   child: Text(
@@ -228,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 20,
+                                  height: 10,
                                 ),
                                 Expanded(
                                   child: MaterialButton(
