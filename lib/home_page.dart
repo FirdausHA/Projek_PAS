@@ -17,27 +17,27 @@ class _HomePageState extends State<HomePage> {
 
   AppBar buildAppbar() {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {
-          _key.currentState!.openDrawer();
-        },
-        icon: Icon(
-          Icons.sort,
-          color: Color(0xfff0deba),
-        ),
-      ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.search),
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.shopping_cart_outlined,
-          ),
-        )
-      ],
+      // leading: IconButton(
+      //   onPressed: () {
+      //     _key.currentState!.openDrawer();
+      //   },
+      //   icon: Icon(
+      //     Icons.sort,
+      //     color: Color(0xfff0deba),
+      //   ),
+      // ),
+      // actions: [
+      //   IconButton(
+      //     onPressed: () {},
+      //     icon: Icon(Icons.search),
+      //   ),
+      //   IconButton(
+      //     onPressed: () {},
+      //     icon: Icon(
+      //       Icons.shopping_cart_outlined,
+      //     ),
+      //   )
+      // ],
     );
   }
 
