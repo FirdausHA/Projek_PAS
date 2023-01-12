@@ -3,21 +3,19 @@ import 'package:projek_pas/Model/Watch.dart';
 
 import 'Detail.dart';
 
-class WatchYellow extends StatefulWidget {
-  const WatchYellow({Key? key}) : super(key: key);
+class PinkGold extends StatefulWidget {
+  const PinkGold({Key? key}) : super(key: key);
 
   @override
-  State<WatchYellow> createState() => _WatchYellow();
+  State<PinkGold> createState() => _PinkGoldState();
 }
 
-class _WatchYellow extends State<WatchYellow> {
-  int indexCategory = 0;
+class _PinkGoldState extends State<PinkGold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
-          const SizedBox(height: 30),
           gridWatch(),
         ],
       ),
@@ -28,25 +26,24 @@ class _WatchYellow extends State<WatchYellow> {
     return GridView.builder(
       itemCount: dummyWatch_1.length,
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(20),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 10,
-        crossAxisSpacing: 4,
-        mainAxisExtent: 265,
+        crossAxisSpacing: 10,
+        mainAxisExtent: 240,
       ),
       itemBuilder: (context, index) {
         Watch watch = dummyWatch_1[index];
         return GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Deatail(watch: watch);
+              return Detail(watch: watch);
             }));
           },
           child: Container(
             alignment: Alignment.topRight,
-            height: 150,
+            height: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Color(0xfffdd691),
@@ -56,14 +53,13 @@ class _WatchYellow extends State<WatchYellow> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 4),
                     Center(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
                         child: Image.asset(
                           watch.image,
-                          width: 220,
-                          height: 220,
+                          width: 180,
+                          height: 180,
                           fit: BoxFit.cover,
                         ),
                       ),

@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Bottom_Navbar.dart';
 import 'package:projek_pas/Model/Watch.dart';
+import 'package:projek_pas/Screen/Platinum.dart';
 import 'package:projek_pas/Screen/Watch_Gold.dart';
+import 'package:projek_pas/Tabbar.dart';
 
 
-class Deatail extends StatefulWidget {
-  const Deatail({Key? key, required this.watch}) : super(key: key);
+class Detail extends StatefulWidget {
+  const Detail({Key? key, required this.watch}) : super(key: key);
   final Watch watch;
 
   @override
-  State<Deatail> createState() => _DetailState();
+  State<Detail> createState() => _DetailState();
 }
 
-class _DetailState extends State<Deatail> {
+class _DetailState extends State<Detail> {
   int quantity = 1;
-  bool favorite = false;
+  bool cart = false;
   Widget buildDetailText({required title, required subTitle}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +64,7 @@ class _DetailState extends State<Deatail> {
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (con) => WatchGold(),
+                                    builder: (con) => Bottom(),
                                   ),
                                 );
                               },
@@ -107,63 +110,18 @@ class _DetailState extends State<Deatail> {
                             bottomLeft: Radius.circular(100),
                           ),
                         ),
-                        child: SafeArea(
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: Icon(
-                                      Icons.search,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  Stack(
-                                    alignment: Alignment.topRight,
-                                    children: [
-                                      IconButton(
-                                        onPressed: () {},
-                                        icon: Icon(
-                                          Icons.shopping_cart_outlined,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Positioned(
-                                        right: 10,
-                                        bottom: 24,
-                                        child: CircleAvatar(
-                                          radius: 7,
-                                          child: Center(
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  bottom: 3),
-                                              child: Text("1"),
-                                            ),
-                                          ),
-                                          backgroundColor: Color(0xff233a66),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
                       ),
                     )
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 45),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Image.asset(
                         widget.watch.image,
-                        scale: 1,
+                        scale: 1.75,
                       ),
                       RotatedBox(
                         quarterTurns: 3,
@@ -217,7 +175,7 @@ class _DetailState extends State<Deatail> {
                       Text(
                         widget.watch.subtitle.toString(),
                         style: const TextStyle(
-                          fontSize: 50,
+                          fontSize: 40,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontFamily: "customFont",
@@ -226,7 +184,7 @@ class _DetailState extends State<Deatail> {
                       Text(
                         "345\$",
                         style: TextStyle(
-                          fontSize: 34,
+                          fontSize: 30,
                           color: Color(0xffffda9c),
                           fontWeight: FontWeight.bold,
                           fontFamily: "customFont",
@@ -238,7 +196,7 @@ class _DetailState extends State<Deatail> {
                   Text(
                     widget.watch.description,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Colors.white,
                     ),
                   ),
@@ -248,7 +206,7 @@ class _DetailState extends State<Deatail> {
                         flex: 5,
                         child: MaterialButton(
                           onPressed: () {},
-                          height: 55,
+                          height: 50,
                           color: Color(0xfffdd691),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
@@ -257,7 +215,7 @@ class _DetailState extends State<Deatail> {
                             "ADD TO CART",
                             style: TextStyle(
                               letterSpacing: 1,
-                              fontSize: 25,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Color(0xff303136),
                             ),
@@ -265,7 +223,7 @@ class _DetailState extends State<Deatail> {
                         ),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 5,
                       ),
                       Expanded(
                         child: Container(
@@ -278,14 +236,14 @@ class _DetailState extends State<Deatail> {
                             child: IconButton(
                               onPressed: () {
                                 setState(() {
-                                  favorite = !favorite;
+                                  cart = !cart;
                                 });
                               },
                               icon: Icon(
-                                favorite
-                                    ? Icons.favorite
-                                    : Icons.favorite_border,
-                                color: Color(0xffff6d80),
+                                cart
+                                    ? Icons.shopping_cart
+                                    : Icons.add_shopping_cart,
+                                color: Colors.black,
                               ),
                             ),
                           ),

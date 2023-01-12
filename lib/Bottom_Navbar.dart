@@ -44,8 +44,13 @@ class _BottomState extends State<Bottom> {
             activeColor: Colors.white,
           ),
           BottomBarItem(
-            icon: Icon(Icons.production_quantity_limits),
+            icon: Icon(Icons.watch),
             title: Text('Product'),
+            activeColor: Colors.white,
+          ),
+          BottomBarItem(
+            icon: Icon(Icons.add_shopping_cart),
+            title: Text('Cart'),
             activeColor: Colors.white,
           ),
           BottomBarItem(

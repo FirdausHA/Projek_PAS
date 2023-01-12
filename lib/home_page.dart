@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Tabbar.dart';
 import 'package:projek_pas/details_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -140,97 +141,99 @@ class _HomePageState extends State<HomePage> {
       key: _key,
       appBar: buildAppbar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 35),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  buildProductTitle(
-                    title: "FEATURED",
-                  ),
-                  Container(
-                    height: screenHeight! / 4 - 40,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xffffd792),
-                      borderRadius: BorderRadius.circular(10.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    buildProductTitle(
+                      title: "FEATURED",
                     ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    "WATCH STORE",
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Color(0xff2a3d50),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 24,
+                    Container(
+                      height: screenHeight! / 4 - 40,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color(0xffffd792),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Flexible(
+                                    child: Text(
+                                      "WATCH STORE",
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: Color(0xff2a3d50),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 24,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 1,
-                                ),
-                                Flexible(
-                                  child: Text(
-                                    "Fashion Men Quartz\nwatch Luxury Leathers\nStrop WAterprof",
-                                    style: TextStyle(
-                                      color: Color(0xffad8347),
-                                      fontWeight: FontWeight.bold,
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  Flexible(
+                                    child: Text(
+                                      "Fashion Men Quartz\nwatch Luxury Leathers\nStrop WAterprof",
+                                      style: TextStyle(
+                                        color: Color(0xffad8347),
+                                        fontWeight: FontWeight.bold,
 
+                                      ),
                                     ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Expanded(
-                                  child: MaterialButton(
-                                    onPressed: () {},
-                                    elevation: 5,
-                                    color: Color(0xfffbf9e4),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Expanded(
+                                    child: MaterialButton(
+                                      onPressed: () {},
+                                      elevation: 5,
+                                      color: Color(0xfffbf9e4),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
 
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          "Buy Now",
-                                          style: TextStyle(
-                                            color: Color(0xff846b4d),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            "Buy Now",
+                                            style: TextStyle(
+                                              color: Color(0xff846b4d),
+                                            ),
                                           ),
-                                        ),
-                                        Flexible(
-                                          child: Icon(
-                                            Icons.arrow_forward_sharp,
-                                            color: Color(0xff846b4d),
-                                          ),
-                                        )
-                                      ],
+                                          Flexible(
+                                            child: Icon(
+                                              Icons.arrow_forward_sharp,
+                                              color: Color(0xff846b4d),
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          child: Image.asset("images/image1.png"),
-                        )
-                      ],
+                          Expanded(
+                            child: Image.asset("images/image1.png"),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             Container(

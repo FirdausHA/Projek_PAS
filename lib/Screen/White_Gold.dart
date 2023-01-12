@@ -7,45 +7,43 @@ class WhiteGold extends StatefulWidget {
   const WhiteGold({Key? key}) : super(key: key);
 
   @override
-  State<WhiteGold> createState() => _WhiteGold();
+  State<WhiteGold> createState() => _WhiteGoldState();
 }
 
-class _WhiteGold extends State<WhiteGold> {
-  int indexCategory = 0;
+class _WhiteGoldState extends State<WhiteGold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
-          const SizedBox(height: 30),
           gridWatch(),
         ],
       ),
     );
   }
+
   Widget gridWatch() {
     return GridView.builder(
       itemCount: dummyWatch_2.length,
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(20),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 10,
-        crossAxisSpacing: 4,
-        mainAxisExtent: 265,
+        crossAxisSpacing: 10,
+        mainAxisExtent: 240,
       ),
       itemBuilder: (context, index) {
         Watch watch = dummyWatch_2[index];
         return GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Deatail(watch: watch);
+              return Detail(watch: watch);
             }));
           },
           child: Container(
             alignment: Alignment.topRight,
-            height: 150,
+            height: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Color(0xfffdd691),
@@ -55,14 +53,13 @@ class _WhiteGold extends State<WhiteGold> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 4),
                     Center(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
                         child: Image.asset(
                           watch.image,
-                          width: 220,
-                          height: 220,
+                          width: 180,
+                          height: 180,
                           fit: BoxFit.cover,
                         ),
                       ),

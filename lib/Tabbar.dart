@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projek_pas/Screen/Platinum.dart';
 import 'package:projek_pas/Screen/White_Gold.dart';
-import 'package:projek_pas/Screen/Yellow_Gold.dart';
+import 'package:projek_pas/Screen/Pink_Gold.dart';
 import 'package:projek_pas/home_page.dart';
 
 import 'Screen/Watch_Gold.dart';
@@ -39,37 +39,44 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Container(
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
-            SizedBox(height: 10),
-            Text('Product', textAlign: TextAlign.center, style: TextStyle(fontSize: 22)),
+            Text('Product', textAlign: TextAlign.center, style: const TextStyle(
+              fontSize: 50,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: "customFont",
+            ),),
             DefaultTabController(
                 length: 4, // length of tabs
                 initialIndex: 0,
-                child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
-                  Container(
-                    child: TabBar(
-                      labelColor: Color(0xfff0deba),
-                      unselectedLabelColor: Colors.grey,
-                      tabs: [
-                        Tab(text: 'Gold'),
-                        Tab(text: 'Yellow Gold'),
-                        Tab(text: 'White Gold'),
-                        Tab(text: 'Platinum'),
-                      ],
-                    ),
-                  ),
-                  Container(
-                      height: 700, //height of TabBarView
-                      decoration: BoxDecoration(
-                          border: Border(top: BorderSide(color: Colors.grey, width: 0))
+                child: SingleChildScrollView(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
+                    Container(
+                      child: TabBar(
+                        labelColor: Color(0xfff0deba),
+                        unselectedLabelColor: Colors.grey,
+                        tabs: [
+                          Container(
+                            width: 30.0,
+                            child: Tab(text: 'Gold'),
+                          ),
+                          Tab(text: 'Pink Gold'),
+                          Tab(text: 'White Gold'),
+                          Tab(text: 'Platinum'),
+                        ],
                       ),
-                      child: TabBarView(children: <Widget>[
-                        WatchGold(),
-                        WatchYellow(),
-                        WhiteGold(),
-                        PlatinumWatch(),
-                      ])
-                  )
-                ])
+                    ),
+                    Container(
+                        height: 700, //height of TabBarView
+
+                        child: TabBarView(children: <Widget>[
+                          WatchGold(),
+                          PinkGold(),
+                          WhiteGold(),
+                          Platinum(),
+                        ])
+                    )
+                  ]),
+                )
             ),
           ]),
         ),
