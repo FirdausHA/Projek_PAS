@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:projek_pas/Bottom_Navbar.dart';
-import 'package:projek_pas/Tabbar.dart';
-import 'package:projek_pas/home_page.dart';
+import 'package:get/get.dart';
+import 'package:projek_pas/page/Detail.dart';
+import 'package:projek_pas/page/Home.dart';
+import 'package:projek_pas/page/Product.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      getPages: [
+        GetPage(name: '/', page: ()=> Home()),
+        GetPage(name: '/product', page: ()=> ProductPage()),
+        GetPage(name: '/product_detail', page: ()=> DetailPage()),
+      ],
       debugShowCheckedModeBanner: false,
       title: 'Watch Store',
       theme: ThemeData(

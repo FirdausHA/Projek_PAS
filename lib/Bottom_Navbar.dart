@@ -3,6 +3,7 @@ import 'package:bottom_bar/bottom_bar.dart';
 import 'package:projek_pas/Tabbar.dart';
 import 'package:projek_pas/home_page.dart';
 import 'package:projek_pas/main.dart';
+import 'package:projek_pas/page/home.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
@@ -23,6 +24,7 @@ class _BottomState extends State<Bottom> {
         children: [
           HomePage(),
           MyHomePage(),
+          Home(),
           Container(color: Colors.white),
         ],
         onPageChanged: (index) {
